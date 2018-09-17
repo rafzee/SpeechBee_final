@@ -2,7 +2,8 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/SpeechBee.iml" filepath="$PROJECT_DIR$/SpeechBee.iml" />
+      <module fileurl="file://C:\Users\sonaila\AndroidStudioProjects\SpeechBee_final\SpeechBee.iml" filepath="C:\Users\sonaila\AndroidStudioProjects\SpeechBee_final\SpeechBee.iml" />
+      <module fileurl="file://$PROJECT_DIR$/SpeechBee_final.iml" filepath="$PROJECT_DIR$/SpeechBee_final.iml" />
       <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
     </modules>
   </component>
