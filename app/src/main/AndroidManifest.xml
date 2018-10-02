@@ -26,6 +26,7 @@
             android:label="@string/title_activity_navigation_home"
             android:theme="@style/AppTheme.NoActionBar" />
         <activity android:name=".OralActivity" />
+        <activity android:name=".ImagesActivity"></activity>
     </application>
 
 </manifest>

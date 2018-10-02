@@ -28,6 +28,7 @@ public class TherapyLevelActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 Intent i = new Intent(TherapyLevelActivity.this, OralActivity.class);
+                startActivity(i);
             }
         });
     }
