@@ -70,7 +70,7 @@ public class LoginActivity extends AppCompatActivity {
                         public void onComplete(@NonNull Task<AuthResult> task) {
                             if (task.isSuccessful()) {
                                 FirebaseUser user = mAuth.getCurrentUser();
-                                Toast.makeText(getApplicationContext(), "Logged in", Toast.LENGTH_SHORT).show();
+                                Toast.makeText(getApplicationContext(), "Logging in", Toast.LENGTH_SHORT).show();
                                 Intent intent = new Intent(LoginActivity.this, TherapyLevelActivity.class);
                                 startActivity(intent);
                                 finish();
@@ -97,7 +97,6 @@ public class LoginActivity extends AppCompatActivity {
                     .show();
         }
     }
-
     void signup(){
         email=uname.getText().toString().trim();
         passwrd=pass.getText().toString().trim();
@@ -126,4 +125,6 @@ public class LoginActivity extends AppCompatActivity {
                     });
         }
     }
+
+
 }
