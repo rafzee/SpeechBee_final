@@ -25,7 +25,7 @@
             android:name=".NavigationHome"
             android:label="@string/title_activity_navigation_home"
             android:theme="@style/AppTheme.NoActionBar" />
-        <activity android:name=".OralActivity"></activity>
+        <activity android:name=".OralActivity" />
     </application>
 
 </manifest>
