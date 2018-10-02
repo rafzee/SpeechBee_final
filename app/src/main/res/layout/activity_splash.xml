@@ -2,33 +2,55 @@
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
+
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@drawable/back"
     tools:context="com.example.muhamin.speechbee.SplashActivity">
 
     <TextView
-        android:id="@+id/textView2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:lineSpacingExtra="12sp"
+        android:text="from"
+        android:id="@+id/from"
+        android:textSize="40sp"
+        android:layout_centerInParent="true"
+        android:layout_alignEnd="@id/lets"
+        android:textColor="@color/black"
+        android:textStyle="italic"
+        android:fontFamily="@font/scriptbl"
+        android:layout_alignRight="@id/lets" />
+
+
+    <ImageView
+        android:id="@+id/bee"
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        android:src="@drawable/bee"
+        android:layout_centerInParent="true"
+        android:layout_toLeftOf="@id/from" />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@id/bee"
         android:text="Let's Learn"
-        android:textColor="@android:color/black"
-        android:textSize="30sp"
-        android:textStyle="bold" />
+        android:id="@+id/lets"
+        android:textSize="50sp"
+        android:layout_centerInParent="true"
+        android:textStyle="italic"
+        android:textColor="@color/black"
+        android:fontFamily="@font/scriptbl" />
 
     <TextView
-        android:id="@+id/textView"
-        android:layout_width="match_parent"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignParentEnd="true"
-        android:layout_alignParentRight="true"
-        android:layout_below="@+id/textView2"
-        android:layout_marginEnd="11dp"
-        android:layout_marginRight="11dp"
-        android:layout_marginTop="138dp"
         android:text="Speech Bee"
-        android:textColor="@android:color/black"
-        android:textSize="50sp"
-        android:textStyle="bold" />
+        android:id="@+id/speech"
+        android:textSize="60sp"
+        android:layout_below="@id/bee"
+        android:layout_centerInParent="true"
+        android:textStyle="italic|bold"
+        android:textColor="@color/black"
+        android:fontFamily="@font/scriptbl" />
+
 </RelativeLayout>

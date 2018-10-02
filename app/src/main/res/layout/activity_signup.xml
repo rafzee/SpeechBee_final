@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/back"
+    android:background="@drawable/butterscotch"
     tools:context="com.example.muhamin.speechbee.SignupActivity">
 
     <RelativeLayout
@@ -16,15 +16,22 @@
             android:layout_height="match_parent"
             android:alpha="0.8" />
 
-        <RelativeLayout
+        <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_centerVertical="true"
             android:layout_marginLeft="40dp"
             android:layout_marginRight="40dp"
-            android:id="@+id/relativeLayout">
+            android:id="@+id/linearLayout"
+            android:orientation="vertical">
 
 
+
+            <android.support.design.widget.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="8dp"
+                android:layout_marginTop="8dp">
             <EditText
                 android:id="@+id/name"
                 android:layout_width="match_parent"
@@ -32,13 +39,17 @@
                 android:backgroundTint="@color/colorAccent"
                 android:fontFamily="sans-serif-light"
                 android:layout_marginTop="30dp"
-                android:textStyle="bold"
                 android:hint="Name"
                 android:inputType="text"
                 android:textColor="@color/common_google_signin_btn_text_dark_focused"
                 android:textColorHint="@color/colorAccent"
                 android:textSize="17sp" />
-
+            </android.support.design.widget.TextInputLayout>
+            <android.support.design.widget.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="8dp"
+                android:layout_marginTop="8dp">
             <EditText
                 android:id="@+id/age"
                 android:layout_width="match_parent"
@@ -47,14 +58,18 @@
                 android:layout_marginTop="30dp"
                 android:backgroundTint="@color/colorAccent"
                 android:fontFamily="sans-serif-light"
-                android:textStyle="bold"
                 android:hint="Age"
                 android:inputType="date"
                 android:textColor="@color/common_google_signin_btn_text_dark_focused"
                 android:textColorHint="@color/colorAccent"
                 android:textSize="17sp" />
 
-
+            </android.support.design.widget.TextInputLayout>
+            <android.support.design.widget.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="8dp"
+                android:layout_marginTop="8dp">
             <EditText
                 android:id="@+id/email"
                 android:layout_width="match_parent"
@@ -68,15 +83,19 @@
                 android:textColor="@color/colorAccent"
                 android:textColorHint="@color/colorAccent"
                 android:textSize="17sp"
-                android:textStyle="bold" />
-
+                />
+            </android.support.design.widget.TextInputLayout>
+            <android.support.design.widget.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="8dp"
+                android:layout_marginTop="8dp">
             <EditText
                 android:id="@+id/pass"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_below="@id/email"
                 android:layout_marginTop="30dp"
-                android:textStyle="bold"
                 android:backgroundTint="@color/colorAccent"
                 android:fontFamily="sans-serif-light"
                 android:hint="Password"
@@ -84,14 +103,40 @@
                 android:textColor="@color/colorAccent"
                 android:textColorHint="@color/colorAccent"
                 android:textSize="17sp" />
+            </android.support.design.widget.TextInputLayout>
 
+            <android.support.design.widget.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="8dp"
+                android:layout_marginTop="8dp">
+                <EditText
+                    android:id="@+id/pass2"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/pass"
+                    android:layout_marginTop="30dp"
+                    android:backgroundTint="@color/colorAccent"
+                    android:fontFamily="sans-serif-light"
+                    android:hint="Confirm Password"
+                    android:inputType="textPassword"
+                    android:textColor="@color/colorAccent"
+                    android:textColorHint="@color/colorAccent"
+                    android:textSize="17sp" />
+            </android.support.design.widget.TextInputLayout>
+
+
+            <android.support.design.widget.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="8dp"
+                android:layout_marginTop="8dp">
             <EditText
                 android:id="@+id/contact"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_below="@id/pass"
+                android:layout_below="@id/pass2"
                 android:layout_marginTop="30dp"
-                android:textStyle="bold"
                 android:backgroundTint="@color/colorAccent"
                 android:fontFamily="sans-serif-light"
                 android:hint="Phone No."
@@ -99,8 +144,11 @@
                 android:textColor="@color/colorAccent"
                 android:textColorHint="@color/colorAccent"
                 android:textSize="17sp" />
+            </android.support.design.widget.TextInputLayout>
 
-        </RelativeLayout>
+
+
+        </LinearLayout>
 
         <Button
             android:id="@+id/btSignUp"
@@ -118,7 +166,7 @@
             android:id="@+id/textv"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_above="@+id/relativeLayout"
+            android:layout_above="@+id/linearLayout"
             android:layout_centerHorizontal="true"
             android:layout_marginBottom="25dp"
             android:backgroundTint="@color/colorAccent"

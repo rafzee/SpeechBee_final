@@ -20,7 +20,12 @@
         <activity android:name=".LoginActivity" />
         <activity android:name=".SignupActivity" />
         <activity android:name=".TherapyLevelActivity" />
-        <activity android:name=".ReceptiveLevelsActivity"></activity>
+        <activity android:name=".ReceptiveLevelsActivity" />
+        <activity
+            android:name=".NavigationHome"
+            android:label="@string/title_activity_navigation_home"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity android:name=".OralActivity"></activity>
     </application>
 
 </manifest>
