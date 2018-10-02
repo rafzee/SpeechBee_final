@@ -3,9 +3,9 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
     android:background="@drawable/butterscotch"
-    tools:context="com.example.muhamin.speechbee.ReceptiveLevelsActivity">
+    android:layout_height="match_parent"
+    tools:context="com.example.muhamin.speechbee.PragmaticActivity">
 
     <RelativeLayout
         android:layout_width="match_parent"
@@ -14,10 +14,10 @@
         tools:layout_editor_absoluteY="106dp"
         tools:ignore="MissingConstraints">
 
-    <View
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:alpha="0.8" />
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:alpha="0.8" />
 
         <Button
             android:id="@+id/btn1"
@@ -26,9 +26,9 @@
             android:layout_alignParentLeft="true"
             android:layout_alignParentStart="true"
             android:layout_alignParentTop="true"
-            android:layout_marginTop="170dp"
+            android:layout_marginTop="208dp"
             android:background="@drawable/button_text"
-            android:text="Preposition Lesson" />
+            android:text="regular manners" />
 
         <Button
             android:id="@+id/btn2"
@@ -37,21 +37,11 @@
             android:layout_alignParentLeft="true"
             android:layout_alignParentStart="true"
             android:layout_below="@+id/btn1"
-            android:layout_marginTop="23dp"
+            android:layout_marginTop="34dp"
             android:background="@drawable/button_text"
-            android:text="Color Lesson" />
-
-        <Button
-            android:id="@+id/btn3"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_alignParentLeft="true"
-            android:layout_alignParentStart="true"
-            android:layout_below="@+id/btn2"
-            android:layout_marginTop="21dp"
-            android:background="@drawable/button_text"
-            android:text="Body Parts Recognition" />
+            android:text="permission seeking and waiting" />
 
     </RelativeLayout>
+
 
 </android.support.constraint.ConstraintLayout>
