@@ -20,7 +20,8 @@
         <activity android:name=".LoginActivity" />
         <activity android:name=".SignupActivity" />
         <activity android:name=".TherapyLevelActivity" />
-        <activity android:name=".ReceptiveLevelsActivity"></activity>
+        <activity android:name=".ReceptiveLevelsActivity" />
+        <activity android:name=".chatActivity"></activity>
     </application>
 
 </manifest>
