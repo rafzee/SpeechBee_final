@@ -25,6 +25,12 @@
         <activity android:name=".ExpressiveActivity" />
         <activity android:name=".PragmaticActivity" />
         <activity android:name=".CoversationActivity"></activity>
+        <activity
+            android:name=".NavigationHome"
+            android:label="@string/title_activity_navigation_home"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity android:name=".OralActivity" />
+        <activity android:name=".ImagesActivity"></activity>
     </application>
 
 </manifest>
