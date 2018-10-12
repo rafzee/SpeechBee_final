@@ -21,6 +21,10 @@
         <activity android:name=".SignupActivity" />
         <activity android:name=".TherapyLevelActivity" />
         <activity android:name=".ReceptiveLevelsActivity" />
+        <activity android:name=".PreverbalActivity" />
+        <activity android:name=".ExpressiveActivity" />
+        <activity android:name=".PragmaticActivity" />
+        <activity android:name=".CoversationActivity"></activity>
         <activity
             android:name=".NavigationHome"
             android:label="@string/title_activity_navigation_home"

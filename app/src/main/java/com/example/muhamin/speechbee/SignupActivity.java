@@ -86,7 +86,7 @@ public class SignupActivity extends AppCompatActivity {
                             refDatabase.child(user.getUid()).setValue(student);
                             progressBar.dismiss();
 
-                            Intent intent = new Intent(SignupActivity.this, MainActivity.class);
+                            Intent intent = new Intent(SignupActivity.this, TherapyLevelActivity.class);
                             startActivity(intent);
 
                         } else
