@@ -1,11 +1,14 @@
 package com.example.muhamin.speechbee;
 
+import android.app.AlertDialog;
+import android.content.DialogInterface;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
 import android.net.Uri;
 import android.speech.tts.TextToSpeech;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.view.LayoutInflater;
 import android.view.View;
 import android.widget.ImageButton;
 import android.widget.ImageView;
@@ -21,6 +24,7 @@ import java.net.URI;
 import java.util.Locale;
 
 public class OralActivity extends AppCompatActivity {
+
 
     private ImageView img;
     private ImageButton im1, im2;
@@ -83,6 +87,17 @@ public class OralActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
+
+/*
+
+        AlertDialog.Builder b;
+        b = new AlertDialog.Builder(this);
+        b.setView(getLayoutInflater().inflate(R.layout.start_lesson, null));
+        b.setPositiveButton(R.drawable.button_text, )
+        b.show();
+*/
+
+
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_oral);
         img = findViewById(R.id.imageView_oral);
