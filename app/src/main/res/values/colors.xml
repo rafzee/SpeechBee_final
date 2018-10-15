@@ -8,5 +8,6 @@
     <color name="colorAmber">#FFC400</color>
     <color name="colorText">#faeb9f</color>
     <color name="black">#000000</color>
+    <color name="button_color">#019C9E</color>
 
 </resources>
