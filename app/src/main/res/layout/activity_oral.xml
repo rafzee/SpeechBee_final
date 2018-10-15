@@ -13,7 +13,7 @@
         android:id="@+id/imageView_oral"
         android:layout_centerHorizontal="true"
         android:layout_centerInParent="true"
-        android:src="@drawable/red" />
+        android:src="@drawable/body_1" />
 
     <ImageButton
         android:id="@+id/go_back"
@@ -40,7 +40,7 @@
         android:layout_below="@id/imageView_oral"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="10dp"
-        android:text="RED"
+        android:text="EYES"
         android:textColor="@color/black"
         android:textSize="35sp" />
 

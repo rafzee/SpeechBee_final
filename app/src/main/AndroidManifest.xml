@@ -24,6 +24,8 @@
         <activity android:name=".PreverbalActivity" />
         <activity android:name=".ExpressiveActivity" />
         <activity android:name=".PragmaticActivity" />
+        <activity android:name=".OmeActivity"/>
+        <activity android:name=".ColourActivity"/>
         <activity android:name=".CoversationActivity"></activity>
         <activity
             android:name=".NavigationHome"

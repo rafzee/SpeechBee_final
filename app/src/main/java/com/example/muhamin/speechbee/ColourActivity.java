@@ -73,7 +73,7 @@ public class ColourActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_oral);
+        setContentView(R.layout.activity_colour);
         img = findViewById(R.id.imageView_oral);
         oral_tv = findViewById(R.id.english_name);
         im1 = findViewById(R.id.go_next);

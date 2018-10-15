@@ -44,7 +44,7 @@ public class SplashActivity extends AppCompatActivity {
             @Override
             public void run() {
                 if (FirebaseAuth.getInstance().getCurrentUser() != null) {
-                    Intent i = new Intent(getApplicationContext(), ColourActivity.class);
+                    Intent i = new Intent(getApplicationContext(), TherapyLevelActivity.class);
                     //     Log.d("haymen", "slpash");
                     startActivity(i);
                     finish();
