@@ -1,20 +1,27 @@
 package com.example.muhamin.speechbee;
 
+import android.net.Uri;
+
 /**
  * Created by sonaila on 9/30/2018.
  */
 
 public class StudentInfo {
 
-    String uname, upass, uage, uphn, uemail;
+    private String uname, uage, uphn, uemail;
 
-    public StudentInfo(String uname, String upass, String uage, String uphn, String uemail) {
+    public StudentInfo() {
+
+    }
+
+    public StudentInfo(String uname, String uage, String uphn, String uemail) {
         this.uname = uname;
-        this.upass = upass;
         this.uage = uage;
         this.uphn = uphn;
         this.uemail = uemail;
     }
+
+
 
     public String getUname() {
         return uname;
@@ -22,14 +29,6 @@ public class StudentInfo {
 
     public void setUname(String uname) {
         this.uname = uname;
-    }
-
-    public String getUpass() {
-        return upass;
-    }
-
-    public void setUpass(String upass) {
-        this.upass = upass;
     }
 
     public String getUage() {

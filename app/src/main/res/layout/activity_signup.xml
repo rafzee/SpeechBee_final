@@ -25,44 +25,50 @@
             android:id="@+id/linearLayout"
             android:orientation="vertical">
 
-
+            <ImageView
+                android:id="@+id/imageView"
+                android:layout_width="125dp"
+                android:layout_height="125dp"
+                android:src="@drawable/icon_signup_profile"
+                android:layout_gravity="center"
+                android:foregroundGravity="center" />
 
             <android.support.design.widget.TextInputLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginBottom="8dp"
                 android:layout_marginTop="8dp">
-            <EditText
-                android:id="@+id/name"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:backgroundTint="@color/colorAccent"
-                android:fontFamily="sans-serif-light"
-                android:layout_marginTop="30dp"
-                android:hint="Name"
-                android:inputType="text"
-                android:textColor="@color/common_google_signin_btn_text_dark_focused"
-                android:textColorHint="@color/colorAccent"
-                android:textSize="17sp" />
+                <EditText
+                    android:id="@+id/name"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:backgroundTint="@color/colorAccent"
+                    android:fontFamily="sans-serif-light"
+                    android:layout_marginTop="30dp"
+                    android:hint="Name"
+                    android:inputType="text"
+                    android:textColor="@color/common_google_signin_btn_text_dark_focused"
+                    android:textColorHint="@color/colorAccent"
+                    android:textSize="17sp" />
             </android.support.design.widget.TextInputLayout>
             <android.support.design.widget.TextInputLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginBottom="8dp"
                 android:layout_marginTop="8dp">
-            <EditText
-                android:id="@+id/age"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_below="@id/name"
-                android:layout_marginTop="30dp"
-                android:backgroundTint="@color/colorAccent"
-                android:fontFamily="sans-serif-light"
-                android:hint="Age"
-                android:inputType="date"
-                android:textColor="@color/common_google_signin_btn_text_dark_focused"
-                android:textColorHint="@color/colorAccent"
-                android:textSize="17sp" />
+                <EditText
+                    android:id="@+id/age"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/name"
+                    android:layout_marginTop="30dp"
+                    android:backgroundTint="@color/colorAccent"
+                    android:fontFamily="sans-serif-light"
+                    android:hint="Age"
+                    android:inputType="date"
+                    android:textColor="@color/common_google_signin_btn_text_dark_focused"
+                    android:textColorHint="@color/colorAccent"
+                    android:textSize="17sp" />
 
             </android.support.design.widget.TextInputLayout>
             <android.support.design.widget.TextInputLayout
@@ -70,39 +76,39 @@
                 android:layout_height="wrap_content"
                 android:layout_marginBottom="8dp"
                 android:layout_marginTop="8dp">
-            <EditText
-                android:id="@+id/email"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_below="@id/age"
-                android:layout_marginTop="30dp"
-                android:backgroundTint="@color/colorAccent"
-                android:fontFamily="sans-serif-light"
-                android:hint="Email"
-                android:inputType="textEmailAddress"
-                android:textColor="@color/colorAccent"
-                android:textColorHint="@color/colorAccent"
-                android:textSize="17sp"
-                />
+                <EditText
+                    android:id="@+id/email"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/age"
+                    android:layout_marginTop="30dp"
+                    android:backgroundTint="@color/colorAccent"
+                    android:fontFamily="sans-serif-light"
+                    android:hint="Email"
+                    android:inputType="textEmailAddress"
+                    android:textColor="@color/colorAccent"
+                    android:textColorHint="@color/colorAccent"
+                    android:textSize="17sp"
+                    />
             </android.support.design.widget.TextInputLayout>
             <android.support.design.widget.TextInputLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginBottom="8dp"
                 android:layout_marginTop="8dp">
-            <EditText
-                android:id="@+id/pass"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_below="@id/email"
-                android:layout_marginTop="30dp"
-                android:backgroundTint="@color/colorAccent"
-                android:fontFamily="sans-serif-light"
-                android:hint="Password"
-                android:inputType="textPassword"
-                android:textColor="@color/colorAccent"
-                android:textColorHint="@color/colorAccent"
-                android:textSize="17sp" />
+                <EditText
+                    android:id="@+id/pass"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/email"
+                    android:layout_marginTop="30dp"
+                    android:backgroundTint="@color/colorAccent"
+                    android:fontFamily="sans-serif-light"
+                    android:hint="Password"
+                    android:inputType="textPassword"
+                    android:textColor="@color/colorAccent"
+                    android:textColorHint="@color/colorAccent"
+                    android:textSize="17sp" />
             </android.support.design.widget.TextInputLayout>
 
             <android.support.design.widget.TextInputLayout
@@ -131,19 +137,19 @@
                 android:layout_height="wrap_content"
                 android:layout_marginBottom="8dp"
                 android:layout_marginTop="8dp">
-            <EditText
-                android:id="@+id/contact"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_below="@id/pass2"
-                android:layout_marginTop="30dp"
-                android:backgroundTint="@color/colorAccent"
-                android:fontFamily="sans-serif-light"
-                android:hint="Phone No."
-                android:inputType="phone"
-                android:textColor="@color/colorAccent"
-                android:textColorHint="@color/colorAccent"
-                android:textSize="17sp" />
+                <EditText
+                    android:id="@+id/contact"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/pass2"
+                    android:layout_marginTop="30dp"
+                    android:backgroundTint="@color/colorAccent"
+                    android:fontFamily="sans-serif-light"
+                    android:hint="Phone No."
+                    android:inputType="phone"
+                    android:textColor="@color/colorAccent"
+                    android:textColorHint="@color/colorAccent"
+                    android:textSize="17sp" />
             </android.support.design.widget.TextInputLayout>
 
 

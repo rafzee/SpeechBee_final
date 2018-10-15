@@ -4,54 +4,56 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/butterscotch"
     tools:context="com.example.muhamin.speechbee.OralActivity">
 
-    <RelativeLayout
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        tools:layout_editor_absoluteX="0dp"
-        tools:layout_editor_absoluteY="106dp"
-        tools:ignore="MissingConstraints">
 
-        <View
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:alpha="0.8" />
+    <ImageView
+        android:layout_height="300dp"
+        android:layout_width="300dp"
+        android:id="@+id/imageView_oral"
+        android:layout_centerHorizontal="true"
+        android:layout_centerInParent="true"
+        android:src="@drawable/body_1" />
 
-        <Button
-            android:id="@+id/btn1"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_alignParentLeft="true"
-            android:layout_alignParentStart="true"
-            android:layout_alignParentTop="true"
-            android:layout_marginTop="170dp"
-            android:background="@drawable/button_text"
-            android:text="Oral movement" />
+    <ImageButton
+        android:id="@+id/go_back"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:layout_toLeftOf="@id/imageView_oral"
+        android:background="@drawable/button_white"
+        android:src="@drawable/ic_baseline_navigate_before_24px" />
 
-        <Button
-            android:id="@+id/btn2"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_alignParentLeft="true"
-            android:layout_alignParentStart="true"
-            android:layout_below="@+id/btn1"
-            android:layout_marginTop="23dp"
-            android:background="@drawable/button_text"
-            android:text="Color Lesson" />
+    <ImageButton
+        android:id="@+id/go_next"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:layout_toRightOf="@id/imageView_oral"
+        android:background="@drawable/button_white"
+        android:src="@drawable/ic_baseline_navigate_next_24px" />
 
-        <Button
-            android:id="@+id/btn3"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_alignParentLeft="true"
-            android:layout_alignParentStart="true"
-            android:layout_below="@+id/btn2"
-            android:layout_marginTop="21dp"
-            android:background="@drawable/button_text"
-            android:text="Body Parts Recognition" />
+    <TextView
+        android:id="@+id/english_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/imageView_oral"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="10dp"
+        android:text="Eyes"
+        android:textColor="@color/black"
+        android:textSize="35sp" />
 
-    </RelativeLayout>
+
+    <TextView
+        android:id="@+id/bangla_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@id/imageView_oral"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="10dp"
+        android:text="চোখ"
+        android:textColor="@color/black"
+        android:textSize="35sp" />
 
 </RelativeLayout>
