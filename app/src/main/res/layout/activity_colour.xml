@@ -40,7 +40,7 @@
         android:layout_below="@id/imageView_oral"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="10dp"
-        android:text="RED"
+        android:text="R E D"
         android:textColor="@color/black"
         android:textSize="35sp" />
 
