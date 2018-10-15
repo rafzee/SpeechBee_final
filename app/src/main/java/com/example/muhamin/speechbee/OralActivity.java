@@ -18,7 +18,7 @@ public class OralActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_oral);
         storageReference = FirebaseStorage.getInstance().getReference();
-        img = findViewById(R.id.imageView_oral);
+        //img = findViewById(R.id.imageView_oral);
 
         Glide.with(getApplicationContext()).load(storageReference).into(img);
     }
