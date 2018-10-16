@@ -26,7 +26,7 @@ import java.util.Locale;
 public class OralActivity extends AppCompatActivity {
 
 
-    private ImageView img;
+    private ImageView img, sound;
     private ImageButton im1, im2;
     private TextView oral_tv, oral_tv2;
     private int cnt = 1;
@@ -41,6 +41,7 @@ public class OralActivity extends AppCompatActivity {
                 public void onInit(int i) {
                     if (i != TextToSpeech.ERROR) {
                         textToSpeech.setLanguage(Locale.US);
+                        textToSpeech.setSpeechRate(0.80f);
                     }
                 }
             });
@@ -52,6 +53,7 @@ public class OralActivity extends AppCompatActivity {
                 public void onInit(int i) {
                     if (i != TextToSpeech.ERROR) {
                         toSpeechBangla.setLanguage(new Locale("bn_IN"));
+                        toSpeechBangla.setSpeechRate(0.80f);
                     }
                 }
             });
@@ -67,6 +69,7 @@ public class OralActivity extends AppCompatActivity {
                 public void onInit(int i) {
                     if (i != TextToSpeech.ERROR) {
                         textToSpeech.setLanguage(Locale.US);
+                        textToSpeech.setSpeechRate(0.80f);
                     }
                 }
             });
@@ -78,6 +81,7 @@ public class OralActivity extends AppCompatActivity {
                 public void onInit(int i) {
                     if (i != TextToSpeech.ERROR) {
                         toSpeechBangla.setLanguage(new Locale("bn_IN"));
+                        toSpeechBangla.setSpeechRate(0.80f);
                     }
                 }
             });
@@ -109,6 +113,7 @@ public class OralActivity extends AppCompatActivity {
             public void onInit(int i) {
                 if (i != TextToSpeech.ERROR) {
                     textToSpeech.setLanguage(Locale.US);
+                    textToSpeech.setSpeechRate(0.80f);
                 }
             }
         });
@@ -118,6 +123,8 @@ public class OralActivity extends AppCompatActivity {
             public void onInit(int i) {
                 if (i != TextToSpeech.ERROR) {
                     toSpeechBangla.setLanguage(new Locale("bn_IN"));
+                    toSpeechBangla.setSpeechRate(0.80f);
+                    //toSpeechBangla.setVoice()
                 }
             }
         });
@@ -139,6 +146,31 @@ public class OralActivity extends AppCompatActivity {
                 setImage(cnt);
             }
         });
+
+        /*sound = findViewById(R.id.soundBtn);
+
+        sound.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                textToSpeech.speak(oral_tv.getText().toString(), TextToSpeech.QUEUE_FLUSH, null);
+            }
+        });
+*/
+        oral_tv.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                textToSpeech.speak(oral_tv.getText().toString(), TextToSpeech.QUEUE_FLUSH, null);
+            }
+        });
+
+
+        oral_tv2.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                toSpeechBangla.speak(oral_tv2.getText().toString(), TextToSpeech.QUEUE_FLUSH, null);
+            }
+        });
+
 
     }
 
@@ -171,30 +203,35 @@ public class OralActivity extends AppCompatActivity {
                 oral_tv.setText("Nose");
                 oral_tv2.setText("নাক");
                 textToSpeech.speak("Nose", TextToSpeech.QUEUE_FLUSH, null);
+                toSpeechBangla.speak("নাক", TextToSpeech.QUEUE_FLUSH, null);
                 break;
             case 3:
                 img.setImageResource(R.drawable.body_3);
                 oral_tv.setText("Neck");
                 oral_tv2.setText("গলা");
                 textToSpeech.speak("Neck", TextToSpeech.QUEUE_FLUSH, null);
+                toSpeechBangla.speak("গলা", TextToSpeech.QUEUE_FLUSH, null);
                 break;
             case 4:
                 img.setImageResource(R.drawable.body_4);
                 oral_tv2.setText("চুল");
                 oral_tv.setText("Hair");
                 textToSpeech.speak("Hair", TextToSpeech.QUEUE_FLUSH, null);
+                toSpeechBangla.speak("চুল", TextToSpeech.QUEUE_FLUSH, null);
                 break;
             case 5:
                 img.setImageResource(R.drawable.body_5);
                 oral_tv.setText("Ear");
                 oral_tv2.setText("কান");
                 textToSpeech.speak("Ear", TextToSpeech.QUEUE_FLUSH, null);
+                toSpeechBangla.speak("কান", TextToSpeech.QUEUE_FLUSH, null);
                 break;
             case 6:
                 img.setImageResource(R.drawable.body_6);
                 oral_tv.setText("Lips");
                 oral_tv2.setText("ঠোঁট");
                 textToSpeech.speak("Lips", TextToSpeech.QUEUE_FLUSH, null);
+                toSpeechBangla.speak("ঠোঁট", TextToSpeech.QUEUE_FLUSH, null);
                 break;
         }
     }

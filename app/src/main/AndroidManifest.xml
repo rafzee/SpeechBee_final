@@ -31,7 +31,10 @@
             android:theme="@style/AppTheme.NoActionBar" />
         <activity android:name=".OralActivity" />
         <activity android:name=".ImagesActivity" />
-        <activity android:name=".OmeActivity"></activity>
+        <activity android:name=".OmeActivity" />
+        <activity android:name=".BlowingActivity" />
+        <activity android:name=".MatchingActivity" />
+        <activity android:name=".PermissionActivity"></activity>
     </application>
 
 </manifest>

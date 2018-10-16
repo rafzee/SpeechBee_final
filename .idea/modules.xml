@@ -3,7 +3,6 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/SpeechBee_final.iml" filepath="$PROJECT_DIR$/SpeechBee_final.iml" />
-      <module fileurl="file://I:\SpeechBee_final\SpeechBee_final.iml" filepath="I:\SpeechBee_final\SpeechBee_final.iml" />
       <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
     </modules>
   </component>
