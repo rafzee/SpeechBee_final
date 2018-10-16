@@ -13,7 +13,7 @@
         android:id="@+id/imageView_oral"
         android:layout_centerHorizontal="true"
         android:layout_centerInParent="true"
-        android:src="@drawable/red" />
+        android:src="@drawable/in" />
 
     <ImageButton
         android:id="@+id/go_back"
@@ -40,7 +40,7 @@
         android:layout_below="@id/imageView_oral"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="10dp"
-        android:text="R E D"
+        android:text="I N"
         android:textColor="@color/black"
         android:textSize="35sp" />
 
@@ -52,9 +52,8 @@
         android:layout_above="@id/imageView_oral"
         android:layout_centerHorizontal="true"
         android:layout_marginBottom="10dp"
-        android:text="চোখ"
+        android:text="The cat is in the box"
         android:textColor="@color/black"
         android:textSize="35sp" />
-
 
 </RelativeLayout>

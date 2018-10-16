@@ -6,40 +6,108 @@
     android:layout_height="match_parent"
     tools:context="com.example.muhamin.speechbee.PermissionActivity">
 
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="horizontal"
+        android:layout_below="@id/line_1">
+
+        <ImageButton
+            android:id="@+id/go_back"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:layout_toLeftOf="@id/go_next"
+            android:layout_marginLeft="35dp"
+            android:background="@drawable/button_white"
+            android:src="@drawable/ic_baseline_navigate_before_24px" />
+
+        <ImageButton
+            android:id="@+id/go_next"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:layout_marginLeft="250dp"
+            android:background="@drawable/button_white"
+            android:src="@drawable/ic_baseline_navigate_next_24px" />
+    </LinearLayout>
 
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:id="@+id/line_1">
-        <ImageView
-            android:layout_marginTop="15dp"
-            android:layout_marginLeft="15dp"
-            android:layout_width="100dp"
-            android:layout_height="100dp"
-            android:id="@+id/im1"
-            android:src="@drawable/body_5"/>
+        android:layout_height="match_parent"
+        android:orientation="vertical">
 
         <TextView
-            android:layout_width="wrap_content"
+            android:id="@+id/header"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_toRightOf="@id/im1"
-            android:text="Please Come in"
-            android:textSize="20sp"
+            android:layout_above="@id/line_1"
+            android:layout_centerInParent="true"
+            android:text="Permission to come in"
             android:textColor="@color/black"
-            android:layout_gravity="center"
-            android:layout_marginLeft="50dp"/>
+            android:layout_marginLeft="40dp"
+            android:layout_marginTop="30dp"
+            android:textSize="30sp" />
 
     </LinearLayout>
 
 
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/line_1"
+        android:layout_marginTop="100dp">
+
+        <ImageView
+            android:layout_marginTop="15dp"
+            android:layout_marginLeft="15dp"
+            android:layout_width="200dp"
+            android:layout_height="200dp"
+            android:id="@+id/image1"
+            android:src="@drawable/may1"/>
+
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@id/image1"
+            android:text="May I come in please?"
+            android:textSize="25sp"
+            android:textColor="@color/black"
+            android:layout_gravity="center"
+            android:id="@+id/text1"
+            android:layout_marginLeft="20dp"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/line_1"
+        android:id="@+id/line_2"
+        android:layout_marginTop="30dp">
     <ImageView
         android:layout_marginTop="15dp"
         android:layout_marginLeft="15dp"
-        android:layout_width="100dp"
-        android:layout_height="100dp"
-        android:id="@+id/im2"
-        android:src="@drawable/body_2"
+        android:layout_width="200dp"
+        android:layout_height="200dp"
+        android:id="@+id/image2"
+        android:src="@drawable/may2"
         android:layout_below="@id/line_1"/>
+   <TextView
+       android:layout_width="wrap_content"
+       android:layout_height="wrap_content"
+       android:textSize="25sp"
+       android:textColor="@color/black"
+       android:layout_gravity="center"
+       android:layout_marginLeft="20dp"
+       android:text="Yes please come in"
+       android:id="@id/text2"
+       />
+
+
+    </LinearLayout>
 
 
 </RelativeLayout>

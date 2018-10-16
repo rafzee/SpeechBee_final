@@ -32,7 +32,7 @@ import java.util.Locale;
 public class OralActivity extends AppCompatActivity {
 
 
-    private ImageView img, sound;
+    private ImageView img;
     private ImageButton im1, im2;
     private TextView oral_tv, oral_tv2;
     private int cnt = 1;

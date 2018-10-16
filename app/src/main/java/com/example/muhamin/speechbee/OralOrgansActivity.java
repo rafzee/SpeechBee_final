@@ -10,12 +10,12 @@ import android.widget.TextView;
 
 import java.util.Locale;
 
-public class ColourActivity extends AppCompatActivity {
-    private ImageView img;
+public class OralOrgansActivity extends AppCompatActivity {
+    private ImageView img, sound;
     private ImageButton im1, im2;
-    private TextView oral_tv, oral_tv2,oral_tv3;
+    private TextView oral_tv, oral_tv2;
     private int cnt = 1;
-    private TextToSpeech textToSpeech,textToSpeech1, toSpeechBangla;
+    private TextToSpeech textToSpeech, toSpeechBangla;
 
     @Override
     protected void onRestart() {
@@ -26,6 +26,7 @@ public class ColourActivity extends AppCompatActivity {
                 public void onInit(int i) {
                     if (i != TextToSpeech.ERROR) {
                         textToSpeech.setLanguage(Locale.US);
+                        textToSpeech.setSpeechRate(0.80f);
                     }
                 }
             });
@@ -37,20 +38,10 @@ public class ColourActivity extends AppCompatActivity {
                 public void onInit(int i) {
                     if (i != TextToSpeech.ERROR) {
                         toSpeechBangla.setLanguage(new Locale("bn_IN"));
+                        toSpeechBangla.setSpeechRate(0.80f);
                     }
                 }
             });
-        }
-        if (textToSpeech1 == null) {
-            textToSpeech1 = new TextToSpeech(getApplicationContext(), new TextToSpeech.OnInitListener() {
-                @Override
-                public void onInit(int i) {
-                    if (i != TextToSpeech.ERROR) {
-                        textToSpeech1.setLanguage(Locale.US);
-                    }
-                }
-            });
-
         }
     }
 
@@ -63,6 +54,7 @@ public class ColourActivity extends AppCompatActivity {
                 public void onInit(int i) {
                     if (i != TextToSpeech.ERROR) {
                         textToSpeech.setLanguage(Locale.US);
+                        textToSpeech.setSpeechRate(0.80f);
                     }
                 }
             });
@@ -74,17 +66,7 @@ public class ColourActivity extends AppCompatActivity {
                 public void onInit(int i) {
                     if (i != TextToSpeech.ERROR) {
                         toSpeechBangla.setLanguage(new Locale("bn_IN"));
-                    }
-                }
-            });
-
-        }
-        if (textToSpeech1 == null) {
-            textToSpeech1 = new TextToSpeech(getApplicationContext(), new TextToSpeech.OnInitListener() {
-                @Override
-                public void onInit(int i) {
-                    if (i != TextToSpeech.ERROR) {
-                        textToSpeech1.setLanguage(Locale.US);
+                        toSpeechBangla.setSpeechRate(0.80f);
                     }
                 }
             });
@@ -94,8 +76,19 @@ public class ColourActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
+
+/*
+
+        AlertDialog.Builder b;
+        b = new AlertDialog.Builder(this);
+        b.setView(getLayoutInflater().inflate(R.layout.start_lesson, null));
+        b.setPositiveButton(R.drawable.button_text, )
+        b.show();
+*/
+
+
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_colour);
+        setContentView(R.layout.activity_oral_organs);
         img = findViewById(R.id.imageView_oral);
         oral_tv = findViewById(R.id.english_name);
         im1 = findViewById(R.id.go_next);
@@ -105,6 +98,7 @@ public class ColourActivity extends AppCompatActivity {
             public void onInit(int i) {
                 if (i != TextToSpeech.ERROR) {
                     textToSpeech.setLanguage(Locale.US);
+                    textToSpeech.setSpeechRate(0.80f);
                 }
             }
         });
@@ -114,14 +108,8 @@ public class ColourActivity extends AppCompatActivity {
             public void onInit(int i) {
                 if (i != TextToSpeech.ERROR) {
                     toSpeechBangla.setLanguage(new Locale("bn_IN"));
-                }
-            }
-        });
-        textToSpeech1 = new TextToSpeech(getApplicationContext(), new TextToSpeech.OnInitListener() {
-            @Override
-            public void onInit(int i) {
-                if (i != TextToSpeech.ERROR) {
-                    textToSpeech1.setLanguage(Locale.US);
+                    toSpeechBangla.setSpeechRate(0.80f);
+                    //toSpeechBangla.setVoice()
                 }
             }
         });
@@ -130,7 +118,7 @@ public class ColourActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 cnt++;
-                if (cnt == 10) cnt = 1;
+                if (cnt == 5) cnt = 1;
                 setImage(cnt);
             }
         });
@@ -143,6 +131,16 @@ public class ColourActivity extends AppCompatActivity {
                 setImage(cnt);
             }
         });
+
+        /*sound = findViewById(R.id.soundBtn);
+
+        sound.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                textToSpeech.speak(oral_tv.getText().toString(), TextToSpeech.QUEUE_FLUSH, null);
+            }
+        });
+*/
         oral_tv.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -157,12 +155,7 @@ public class ColourActivity extends AppCompatActivity {
                 toSpeechBangla.speak(oral_tv2.getText().toString(), TextToSpeech.QUEUE_FLUSH, null);
             }
         });
-        oral_tv3.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                textToSpeech1.speak(oral_tv3.getText().toString(), TextToSpeech.QUEUE_FLUSH, null);
-            }
-        });
+
 
     }
 
@@ -176,10 +169,6 @@ public class ColourActivity extends AppCompatActivity {
             toSpeechBangla.stop();
             toSpeechBangla.shutdown();
         }
-        if (textToSpeech1 != null) {
-            textToSpeech1.stop();
-            textToSpeech1.shutdown();
-        }
         super.onPause();
     }
 
@@ -187,61 +176,33 @@ public class ColourActivity extends AppCompatActivity {
 
         switch (idx) {
             case 1:
-                img.setImageResource(R.drawable.red);
-                oral_tv.setText("RED");
+                img.setImageResource(R.drawable.tongue);
+                oral_tv.setText("TONGUE");
                 oral_tv2.setText("চোখ");
-                textToSpeech.speak("RED", TextToSpeech.QUEUE_FLUSH, null);
+                textToSpeech.speak("TONGUE", TextToSpeech.QUEUE_FLUSH, null);
                 toSpeechBangla.speak("চোখ", TextToSpeech.QUEUE_FLUSH, null);
                 //oral_tv.setEnabled(false);
                 break;
             case 2:
-                img.setImageResource(R.drawable.blue);
-                oral_tv.setText("BLUE");
+                img.setImageResource(R.drawable.teeth);
+                oral_tv.setText("TEETH");
                 oral_tv2.setText("নাক");
-                textToSpeech.speak("BLUE", TextToSpeech.QUEUE_FLUSH, null);
+                textToSpeech.speak("TEETH", TextToSpeech.QUEUE_FLUSH, null);
+                toSpeechBangla.speak("নাক", TextToSpeech.QUEUE_FLUSH, null);
                 break;
             case 3:
-                img.setImageResource(R.drawable.green);
-                oral_tv.setText("GREEN");
+                img.setImageResource(R.drawable.gum);
+                oral_tv.setText("GUM");
                 oral_tv2.setText("গলা");
-                textToSpeech.speak("GREEN", TextToSpeech.QUEUE_FLUSH, null);
+                textToSpeech.speak("GUM", TextToSpeech.QUEUE_FLUSH, null);
+                toSpeechBangla.speak("গলা", TextToSpeech.QUEUE_FLUSH, null);
                 break;
             case 4:
-                img.setImageResource(R.drawable.orange);
-                oral_tv2.setText("চুল");
-                oral_tv.setText("ORANGE");
-                textToSpeech.speak("ORANGE", TextToSpeech.QUEUE_FLUSH, null);
-                break;
-            case 5:
-                img.setImageResource(R.drawable.yellow);
-                oral_tv.setText("YELLOW");
-                oral_tv2.setText("কান");
-                textToSpeech.speak("YELLOW", TextToSpeech.QUEUE_FLUSH, null);
-                break;
-            case 6:
-                img.setImageResource(R.drawable.pink);
-                oral_tv.setText("PINK");
+                img.setImageResource(R.drawable.body_6);
+                oral_tv.setText("LIPS");
                 oral_tv2.setText("ঠোঁট");
-                textToSpeech.speak("PINK", TextToSpeech.QUEUE_FLUSH, null);
-                break;
-
-            case 7:
-                img.setImageResource(R.drawable.black);
-                oral_tv.setText("BLACK");
-                oral_tv2.setText("ঠোঁট");
-                textToSpeech.speak("BLACK", TextToSpeech.QUEUE_FLUSH, null);
-                break;
-            case 8:
-                img.setImageResource(R.drawable.white);
-                oral_tv.setText("WHITE");
-                oral_tv2.setText("ঠোঁট");
-                textToSpeech.speak("WHITE", TextToSpeech.QUEUE_FLUSH, null);
-                break;
-            case 9:
-                img.setImageResource(R.drawable.purple);
-                oral_tv.setText("PURPLE");
-                oral_tv2.setText("ঠোঁট");
-                textToSpeech.speak("PURPLE", TextToSpeech.QUEUE_FLUSH, null);
+                textToSpeech.speak("Lips", TextToSpeech.QUEUE_FLUSH, null);
+                toSpeechBangla.speak("ঠোঁট", TextToSpeech.QUEUE_FLUSH, null);
                 break;
         }
     }
@@ -256,9 +217,3 @@ public class ColourActivity extends AppCompatActivity {
         super.onDestroy();
     }
 }
-
-
-
-
-
-
