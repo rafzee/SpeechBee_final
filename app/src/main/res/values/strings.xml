@@ -1,3 +1,4 @@
 <resources>
     <string name="app_name">SpeechBee</string>
+    <string name="title_activity_massage_list">MassageListActivity</string>
 </resources>
