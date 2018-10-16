@@ -28,6 +28,8 @@
         <activity android:name=".ColourActivity" />
         <activity android:name=".CoversationActivity" />
         <activity android:name=".PrepositionActivity" />
+        <activity android:name=".PermissionActivity" />
+
         <activity
             android:name=".NavigationHome"
             android:label="@string/title_activity_navigation_home"

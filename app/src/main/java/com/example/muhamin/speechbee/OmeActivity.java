@@ -27,7 +27,7 @@ public class OmeActivity extends AppCompatActivity {
         b2.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                startActivity(new Intent(OmeActivity.this, OmeActivity.class));
+                startActivity(new Intent(OmeActivity.this, OralOrgansActivity.class));
             }
         });
     }
