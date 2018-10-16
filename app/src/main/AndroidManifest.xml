@@ -24,19 +24,20 @@
         <activity android:name=".PreverbalActivity" />
         <activity android:name=".ExpressiveActivity" />
         <activity android:name=".PragmaticActivity" />
+        <activity android:name=".BlowingActivity"/>
         <activity android:name=".OmeActivity" />
         <activity android:name=".ColourActivity" />
         <activity android:name=".CoversationActivity" />
         <activity android:name=".PrepositionActivity" />
         <activity android:name=".PermissionActivity" />
-
         <activity
             android:name=".NavigationHome"
             android:label="@string/title_activity_navigation_home"
             android:theme="@style/AppTheme.NoActionBar" />
         <activity android:name=".OralActivity" />
         <activity android:name=".ImagesActivity" />
-        <activity android:name=".OralOrgansActivity"></activity>
+        <activity android:name=".OralOrgansActivity" />
+        <activity android:name=".AnticipationActivity"></activity>
     </application>
 
 </manifest>

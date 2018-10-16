@@ -178,24 +178,24 @@ public class OralOrgansActivity extends AppCompatActivity {
             case 1:
                 img.setImageResource(R.drawable.tongue);
                 oral_tv.setText("TONGUE");
-                oral_tv2.setText("চোখ");
+                oral_tv2.setText("জিহ্বা");
                 textToSpeech.speak("TONGUE", TextToSpeech.QUEUE_FLUSH, null);
-                toSpeechBangla.speak("চোখ", TextToSpeech.QUEUE_FLUSH, null);
+                toSpeechBangla.speak("জিহ্বা", TextToSpeech.QUEUE_FLUSH, null);
                 //oral_tv.setEnabled(false);
                 break;
             case 2:
                 img.setImageResource(R.drawable.teeth);
                 oral_tv.setText("TEETH");
-                oral_tv2.setText("নাক");
+                oral_tv2.setText("দাঁত");
                 textToSpeech.speak("TEETH", TextToSpeech.QUEUE_FLUSH, null);
-                toSpeechBangla.speak("নাক", TextToSpeech.QUEUE_FLUSH, null);
+                toSpeechBangla.speak("দাঁত", TextToSpeech.QUEUE_FLUSH, null);
                 break;
             case 3:
                 img.setImageResource(R.drawable.gum);
                 oral_tv.setText("GUM");
-                oral_tv2.setText("গলা");
+                oral_tv2.setText("মাড়ি");
                 textToSpeech.speak("GUM", TextToSpeech.QUEUE_FLUSH, null);
-                toSpeechBangla.speak("গলা", TextToSpeech.QUEUE_FLUSH, null);
+                toSpeechBangla.speak("মাড়ি", TextToSpeech.QUEUE_FLUSH, null);
                 break;
             case 4:
                 img.setImageResource(R.drawable.body_6);

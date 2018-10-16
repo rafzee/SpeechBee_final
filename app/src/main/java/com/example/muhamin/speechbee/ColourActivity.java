@@ -189,59 +189,67 @@ public class ColourActivity extends AppCompatActivity {
             case 1:
                 img.setImageResource(R.drawable.red);
                 oral_tv.setText("RED");
-                oral_tv2.setText("চোখ");
+                oral_tv2.setText("লাল");
                 textToSpeech.speak("RED", TextToSpeech.QUEUE_FLUSH, null);
-                toSpeechBangla.speak("চোখ", TextToSpeech.QUEUE_FLUSH, null);
+                toSpeechBangla.speak("লাল", TextToSpeech.QUEUE_FLUSH, null);
                 //oral_tv.setEnabled(false);
                 break;
             case 2:
                 img.setImageResource(R.drawable.blue);
                 oral_tv.setText("BLUE");
-                oral_tv2.setText("নাক");
+                oral_tv2.setText("নীল");
                 textToSpeech.speak("BLUE", TextToSpeech.QUEUE_FLUSH, null);
+                toSpeechBangla.speak("নীল", TextToSpeech.QUEUE_FLUSH, null);
                 break;
             case 3:
                 img.setImageResource(R.drawable.green);
                 oral_tv.setText("GREEN");
-                oral_tv2.setText("গলা");
+                oral_tv2.setText("সবুজ");
                 textToSpeech.speak("GREEN", TextToSpeech.QUEUE_FLUSH, null);
+                toSpeechBangla.speak("সবুজ", TextToSpeech.QUEUE_FLUSH, null);
                 break;
             case 4:
                 img.setImageResource(R.drawable.orange);
-                oral_tv2.setText("চুল");
+                oral_tv2.setText("কমলা");
                 oral_tv.setText("ORANGE");
                 textToSpeech.speak("ORANGE", TextToSpeech.QUEUE_FLUSH, null);
+                toSpeechBangla.speak("কমলা", TextToSpeech.QUEUE_FLUSH, null);
                 break;
             case 5:
                 img.setImageResource(R.drawable.yellow);
                 oral_tv.setText("YELLOW");
-                oral_tv2.setText("কান");
+                oral_tv2.setText("হলুদ");
                 textToSpeech.speak("YELLOW", TextToSpeech.QUEUE_FLUSH, null);
+                toSpeechBangla.speak("হলুদ", TextToSpeech.QUEUE_FLUSH, null);
                 break;
             case 6:
                 img.setImageResource(R.drawable.pink);
                 oral_tv.setText("PINK");
-                oral_tv2.setText("ঠোঁট");
+                oral_tv2.setText("গোলাপী");
                 textToSpeech.speak("PINK", TextToSpeech.QUEUE_FLUSH, null);
+                toSpeechBangla.speak("গোলাপী", TextToSpeech.QUEUE_FLUSH, null);
                 break;
 
             case 7:
                 img.setImageResource(R.drawable.black);
                 oral_tv.setText("BLACK");
-                oral_tv2.setText("ঠোঁট");
+                oral_tv2.setText("কালো");
                 textToSpeech.speak("BLACK", TextToSpeech.QUEUE_FLUSH, null);
+                toSpeechBangla.speak("কালো", TextToSpeech.QUEUE_FLUSH, null);
                 break;
             case 8:
                 img.setImageResource(R.drawable.white);
                 oral_tv.setText("WHITE");
-                oral_tv2.setText("ঠোঁট");
+                oral_tv2.setText("সাদা");
                 textToSpeech.speak("WHITE", TextToSpeech.QUEUE_FLUSH, null);
+                toSpeechBangla.speak("সাদা", TextToSpeech.QUEUE_FLUSH, null);
                 break;
             case 9:
                 img.setImageResource(R.drawable.purple);
                 oral_tv.setText("PURPLE");
                 oral_tv2.setText("ঠোঁট");
                 textToSpeech.speak("PURPLE", TextToSpeech.QUEUE_FLUSH, null);
+                toSpeechBangla.speak("নীল", TextToSpeech.QUEUE_FLUSH, null);
                 break;
         }
     }

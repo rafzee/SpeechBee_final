@@ -184,10 +184,10 @@ public class PrepositionActivity extends AppCompatActivity {
             case 1:
                 img.setImageResource(R.drawable.in);
                 oral_tv.setText("IN");
-               oral_tv2.setText("The cat is in the box");
+                oral_tv2.setText("The cat is in the box");
                 textToSpeech.speak("in", TextToSpeech.QUEUE_FLUSH, null);
                 textToSpeech1.speak("The cat is in the box", TextToSpeech.QUEUE_FLUSH, null);
-              //  toSpeechBangla.speak("চোখ", TextToSpeech.QUEUE_FLUSH, null);
+                toSpeechBangla.speak("বিড়ালটি বাক্সের ভিতরে", TextToSpeech.QUEUE_FLUSH, null);
                 //oral_tv.setEnabled(false);
                 break;
             case 2:
@@ -196,6 +196,7 @@ public class PrepositionActivity extends AppCompatActivity {
                 oral_tv2.setText("The Dog is on the sofa");
                 textToSpeech.speak("on", TextToSpeech.QUEUE_FLUSH, null);
                 textToSpeech1.speak("The Dog is on the sofa", TextToSpeech.QUEUE_FLUSH, null);
+                toSpeechBangla.speak("কুকুরটি সোফার উপরে", TextToSpeech.QUEUE_FLUSH, null);
                 break;
             case 3:
                 img.setImageResource(R.drawable.up);
@@ -203,6 +204,7 @@ public class PrepositionActivity extends AppCompatActivity {
                 oral_tv2.setText("The bear is going up");
                 textToSpeech.speak("up", TextToSpeech.QUEUE_FLUSH, null);
                 textToSpeech1.speak("The bear is going up", TextToSpeech.QUEUE_FLUSH, null);
+                toSpeechBangla.speak("ভাল্লুকটি উপরে যাচ্ছে", TextToSpeech.QUEUE_FLUSH, null);
                 break;
             case 4:
                 img.setImageResource(R.drawable.down);
@@ -210,6 +212,7 @@ public class PrepositionActivity extends AppCompatActivity {
                 oral_tv2.setText("They are going down");
                 textToSpeech.speak("Down", TextToSpeech.QUEUE_FLUSH, null);
                 textToSpeech1.speak("They are going down",TextToSpeech.QUEUE_FLUSH,null);
+                toSpeechBangla.speak("তারা নিচে নামছে", TextToSpeech.QUEUE_FLUSH, null);
                 break;
             case 5:
                 img.setImageResource(R.drawable.under);
@@ -217,6 +220,7 @@ public class PrepositionActivity extends AppCompatActivity {
                 oral_tv2.setText("The girl is under the table");
                 textToSpeech.speak("UNDER", TextToSpeech.QUEUE_FLUSH, null);
                 textToSpeech1.speak("The girl is under the table",TextToSpeech.QUEUE_FLUSH,null);
+                toSpeechBangla.speak("মেয়েটি টেবিলের নিচে", TextToSpeech.QUEUE_FLUSH, null);
                 break;
             case 6:
                 img.setImageResource(R.drawable.over);
@@ -224,6 +228,7 @@ public class PrepositionActivity extends AppCompatActivity {
                 oral_tv2.setText("The ship is over the box");
                 textToSpeech.speak("over", TextToSpeech.QUEUE_FLUSH, null);
                 textToSpeech1.speak("The ship is over the box",TextToSpeech.QUEUE_FLUSH,null);
+                //toSpeechBangla.speak("ভাল্লুকটি উপরে যাচ্ছে", TextToSpeech.QUEUE_FLUSH, null);
 
                 break;
 

@@ -57,15 +57,23 @@ public class BlowingActivity extends AppCompatActivity {
         });
 
         v.requestFocus();
-   }
+
+        try {
+            v.setVideoURI(Uri.parse("android.resource://" + getPackageName() + "/" + R.raw.blow_2));
+
+        } catch (Exception e) {
+            Log.e("Error", e.getMessage());
+            e.printStackTrace();
+        }
+
+        v.requestFocus();
+        v.start();
 
 
-    public int getRawResIdByName(String resName) {
-        String pkgName = this.getPackageName();
-        int resID = this.getResources().getIdentifier(resName, "video", pkgName);
-        //Log.i("AndroidVideoView", "Res Name: " + resName + "==> Res ID = " + resID);
-        return resID;
+
     }
+
+
 
 
     @Override
