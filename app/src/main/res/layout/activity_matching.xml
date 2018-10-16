@@ -7,43 +7,86 @@
     tools:context="com.example.muhamin.speechbee.MatchingActivity">
 
     <LinearLayout
+        android:id="@+id/line"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="vertical"
-        android:id="@+id/line"
-        >
-        <ImageView
-            android:layout_height="160dp"
-            android:layout_width="160dp"
-            android:layout_gravity="center"
-            android:id="@+id/img1"
-            />
+        android:orientation="vertical">
 
         <ImageView
-            android:layout_height="160dp"
+            android:id="@+id/img1"
             android:layout_width="160dp"
+            android:layout_height="160dp"
             android:layout_gravity="center"
-            android:id="@+id/img2"
-            />
+            android:layout_marginBottom="5dp"
+            android:layout_marginTop="10dp"
+            android:src="@drawable/cat" />
+
         <ImageView
-            android:layout_height="160dp"
+            android:id="@+id/img2"
             android:layout_width="160dp"
-            android:id="@+id/img3"
+            android:layout_height="160dp"
             android:layout_gravity="center"
-            />
+            android:layout_marginBottom="5dp"
+            android:layout_marginTop="5dp"
+            android:src="@drawable/apple" />
+
+        <ImageView
+            android:id="@+id/img3"
+            android:layout_width="160dp"
+            android:layout_height="160dp"
+            android:layout_gravity="center"
+            android:layout_marginBottom="10dp"
+            android:layout_marginTop="5dp"
+            android:src="@drawable/body_1" />
 
     </LinearLayout>
+
+
+    <TextView
+        android:id="@+id/matching_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/line"
+        android:layout_centerHorizontal="true"
+        android:text="Find the cat"
+        android:textColor="@color/black"
+        android:textSize="35sp" />
+
+    <ImageButton
+        android:id="@+id/go_next"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@id/line"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"
+        android:layout_marginBottom="25dp"
+        android:background="@drawable/button_white"
+        android:src="@drawable/ic_baseline_navigate_next_24px" />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Cat"
+        android:visibility="invisible"
+        android:id="@+id/ans_tv"/>
 
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:id="@+id/matching_tv"
-        android:layout_centerHorizontal="true"
-        android:layout_below="@id/line"
-        android:layout_marginTop="5dp"
-        android:text="wwews"
-        android:textSize="35sp"
-        android:textColor="@color/black"/>
+        android:text="Cat"
+        android:visibility="invisible"
+        android:id="@+id/im1_tv"/>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Apple"
+        android:visibility="invisible"
+        android:id="@+id/im2_tv"/>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Eyes"
+        android:visibility="invisible"
+        android:id="@+id/im3_tv"/>
 
 
 </RelativeLayout>

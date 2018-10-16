@@ -2,6 +2,7 @@ package com.example.muhamin.speechbee;
 
 import android.app.Fragment;
 import android.app.FragmentTransaction;
+import android.content.Intent;
 import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
@@ -16,6 +17,8 @@ import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
+
+import com.google.firebase.auth.FirebaseAuth;
 
 public class NavigationHome extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener {
@@ -120,7 +123,8 @@ public class NavigationHome extends AppCompatActivity
             getSupportActionBar().setTitle("Progress Report");
         }
         else if(id == R.id.nav_logout) {
-
+            FirebaseAuth.getInstance().signOut();
+            startActivity(new Intent(getApplicationContext(), LoginActivity.class));
         }
 
 

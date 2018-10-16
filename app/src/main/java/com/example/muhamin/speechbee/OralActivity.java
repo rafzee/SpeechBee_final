@@ -5,6 +5,7 @@ import android.content.DialogInterface;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
 import android.net.Uri;
+import android.provider.ContactsContract;
 import android.speech.tts.TextToSpeech;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -16,6 +17,11 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import com.bumptech.glide.Glide;
+import com.google.firebase.database.DataSnapshot;
+import com.google.firebase.database.DatabaseError;
+import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.FirebaseDatabase;
+import com.google.firebase.database.ValueEventListener;
 import com.google.firebase.storage.FirebaseStorage;
 import com.google.firebase.storage.StorageReference;
 
@@ -31,6 +37,39 @@ public class OralActivity extends AppCompatActivity {
     private TextView oral_tv, oral_tv2;
     private int cnt = 1;
     private TextToSpeech textToSpeech, toSpeechBangla;
+
+    private long start = 0;
+
+    private long duration = 0;
+
+    @Override
+    protected void onStart() {
+        super.onStart();
+        start = System.currentTimeMillis();
+    }
+
+    @Override
+    protected void onStop() {
+        super.onStop();
+        duration = System.currentTimeMillis() - start;
+        // query
+        DatabaseReference reference = FirebaseDatabase.getInstance().getReference("stat").child("pk");
+        reference.child("duration").setValue("new Data");
+
+        reference.addValueEventListener(new ValueEventListener() {
+            @Override
+            public void onDataChange(DataSnapshot dataSnapshot) {
+                for (DataSnapshot dataSnapshot1 : dataSnapshot.getChildren()) {
+
+                }
+            }
+
+            @Override
+            public void onCancelled(DatabaseError databaseError) {
+
+            }
+        });
+    }
 
     @Override
     protected void onRestart() {
