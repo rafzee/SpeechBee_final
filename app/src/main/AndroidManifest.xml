@@ -34,6 +34,7 @@
             android:label="@string/title_activity_navigation_home"
             android:theme="@style/AppTheme.NoActionBar" />
         <activity android:name=".OralActivity" />
+        <activity android:name=".MatchingActivity"/>
         <activity android:name=".ImagesActivity" />
         <activity android:name=".OralOrgansActivity" />
         <activity android:name=".MannersActivity"></activity>

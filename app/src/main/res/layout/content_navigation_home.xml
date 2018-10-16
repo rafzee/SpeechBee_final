@@ -4,8 +4,108 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@drawable/butterscotch"
     app:layout_behavior="@string/appbar_scrolling_view_behavior"
+
+
+
     tools:context=".NavigationHome"
     tools:showIn="@layout/app_bar_navigation_home">
+
+
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            tools:layout_editor_absoluteX="0dp"
+            tools:layout_editor_absoluteY="106dp"
+            tools:ignore="MissingConstraints">
+
+
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:alpha="0.8" />
+
+            <Button
+                android:id="@+id/btn1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentRight="true"
+                android:layout_alignParentTop="true"
+                android:layout_marginTop="62dp"
+                android:background="@drawable/button_text"
+                android:text="OME" />
+
+            <Button
+                android:id="@+id/btn2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"
+                android:layout_below="@+id/btn1"
+                android:layout_marginTop="23dp"
+                android:background="@drawable/button_text"
+                android:text="PreVerbal" />
+
+            <Button
+                android:id="@+id/btn3"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"
+                android:layout_below="@+id/btn2"
+                android:layout_marginTop="21dp"
+                android:background="@drawable/button_text"
+                android:text="Receptive" />
+
+            <Button
+                android:id="@+id/btn4"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"
+                android:layout_below="@+id/btn3"
+                android:layout_marginTop="25dp"
+                android:background="@drawable/button_text"
+                android:text="Expressive" />
+
+            <Button
+                android:id="@+id/btn5"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"
+                android:layout_below="@+id/btn4"
+                android:layout_marginTop="26dp"
+                android:background="@drawable/button_text"
+                android:text="Pragmatic" />
+
+            <Button
+                android:id="@+id/btn6"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"
+                android:layout_below="@+id/btn5"
+                android:layout_marginTop="27dp"
+                android:background="@drawable/button_text"
+                android:text="General conversation" />
+            <Button
+                android:id="@+id/logout"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_below="@+id/btn6"
+                android:layout_alignParentRight="true"
+                android:layout_marginTop="62dp"
+                android:background="@drawable/button_text"
+                android:text="Logout" />
+
+
+
+        </RelativeLayout>
 
 </android.support.constraint.ConstraintLayout>

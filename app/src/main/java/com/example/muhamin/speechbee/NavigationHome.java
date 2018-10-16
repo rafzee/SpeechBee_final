@@ -17,11 +17,16 @@ import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.widget.Button;
 
 import com.google.firebase.auth.FirebaseAuth;
 
 public class NavigationHome extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener {
+
+
+    Button b3, b1, b2, b4, b5, b6,b7;
+
 
     android.support.v4.app.FragmentTransaction fragmentTransaction;
     SharedPreferences sharedPreferences;
@@ -32,6 +37,59 @@ public class NavigationHome extends AppCompatActivity
         setContentView(R.layout.activity_navigation_home);
         Toolbar toolbar = findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
+
+
+        b1 = findViewById(R.id.btn1);
+        b3 = findViewById(R.id.btn3);
+        b2 = findViewById(R.id.btn2);
+        b4 = findViewById(R.id.btn4);
+        b5 = findViewById(R.id.btn5);
+        b6 = findViewById(R.id.btn6);
+        b7 = findViewById(R.id.logout);
+
+        b3.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(NavigationHome.this, ReceptiveLevelsActivity.class);
+                startActivity(intent);
+            }
+        });
+        b1.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(NavigationHome.this, OmeActivity.class);
+                startActivity(intent);
+            }
+        });
+        b2.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(NavigationHome.this, PreverbalActivity.class);
+                startActivity(intent);
+            }
+        });
+
+        b4.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(NavigationHome.this, ExpressiveActivity.class);
+                startActivity(intent);
+            }
+        });
+        b5.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(NavigationHome.this, PragmaticActivity.class);
+                startActivity(intent);
+            }
+        });
+        b6.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(NavigationHome.this, CoversationActivity.class);
+                startActivity(intent);
+            }
+        });
 
 
         FloatingActionButton fab = findViewById(R.id.fab);
