@@ -10,10 +10,11 @@ import android.widget.TextView;
 
 import java.util.Locale;
 
-public class ColourActivity extends AppCompatActivity {
+public class MannersActivity extends AppCompatActivity {
+
     private ImageView img;
     private ImageButton im1, im2;
-    private TextView oral_tv, oral_tv2,oral_tv3;
+    private TextView oral_tv, oral_tv2;
     private int cnt = 1;
     private TextToSpeech textToSpeech,textToSpeech1, toSpeechBangla;
 
@@ -26,6 +27,7 @@ public class ColourActivity extends AppCompatActivity {
                 public void onInit(int i) {
                     if (i != TextToSpeech.ERROR) {
                         textToSpeech.setLanguage(Locale.US);
+                        textToSpeech.setSpeechRate(0.80f);
                     }
                 }
             });
@@ -37,6 +39,7 @@ public class ColourActivity extends AppCompatActivity {
                 public void onInit(int i) {
                     if (i != TextToSpeech.ERROR) {
                         toSpeechBangla.setLanguage(new Locale("bn_IN"));
+                        toSpeechBangla.setSpeechRate(0.80f);
                     }
                 }
             });
@@ -47,6 +50,7 @@ public class ColourActivity extends AppCompatActivity {
                 public void onInit(int i) {
                     if (i != TextToSpeech.ERROR) {
                         textToSpeech1.setLanguage(Locale.US);
+                        textToSpeech1.setSpeechRate(0.80f);
                     }
                 }
             });
@@ -63,6 +67,7 @@ public class ColourActivity extends AppCompatActivity {
                 public void onInit(int i) {
                     if (i != TextToSpeech.ERROR) {
                         textToSpeech.setLanguage(Locale.US);
+                        textToSpeech.setSpeechRate(0.80f);
                     }
                 }
             });
@@ -74,6 +79,7 @@ public class ColourActivity extends AppCompatActivity {
                 public void onInit(int i) {
                     if (i != TextToSpeech.ERROR) {
                         toSpeechBangla.setLanguage(new Locale("bn_IN"));
+                        toSpeechBangla.setSpeechRate(0.80f);
                     }
                 }
             });
@@ -85,6 +91,7 @@ public class ColourActivity extends AppCompatActivity {
                 public void onInit(int i) {
                     if (i != TextToSpeech.ERROR) {
                         textToSpeech1.setLanguage(Locale.US);
+                        textToSpeech1.setSpeechRate(0.80f);
                     }
                 }
             });
@@ -94,8 +101,19 @@ public class ColourActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
+
+/*
+
+        AlertDialog.Builder b;
+        b = new AlertDialog.Builder(this);
+        b.setView(getLayoutInflater().inflate(R.layout.start_lesson, null));
+        b.setPositiveButton(R.drawable.button_text, )
+        b.show();
+*/
+
+
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_colour);
+        setContentView(R.layout.activity_manners);
         img = findViewById(R.id.imageView_oral);
         oral_tv = findViewById(R.id.english_name);
         im1 = findViewById(R.id.go_next);
@@ -105,6 +123,7 @@ public class ColourActivity extends AppCompatActivity {
             public void onInit(int i) {
                 if (i != TextToSpeech.ERROR) {
                     textToSpeech.setLanguage(Locale.US);
+                    textToSpeech.setSpeechRate(0.80f);
                 }
             }
         });
@@ -114,6 +133,8 @@ public class ColourActivity extends AppCompatActivity {
             public void onInit(int i) {
                 if (i != TextToSpeech.ERROR) {
                     toSpeechBangla.setLanguage(new Locale("bn_IN"));
+                    toSpeechBangla.setSpeechRate(0.80f);
+                    //toSpeechBangla.setVoice()
                 }
             }
         });
@@ -122,6 +143,7 @@ public class ColourActivity extends AppCompatActivity {
             public void onInit(int i) {
                 if (i != TextToSpeech.ERROR) {
                     textToSpeech1.setLanguage(Locale.US);
+                    textToSpeech1.setSpeechRate(0.80f);
                 }
             }
         });
@@ -130,7 +152,7 @@ public class ColourActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 cnt++;
-                if (cnt == 10) cnt = 1;
+                if (cnt == 8) cnt = 1;
                 setImage(cnt);
             }
         });
@@ -143,6 +165,16 @@ public class ColourActivity extends AppCompatActivity {
                 setImage(cnt);
             }
         });
+
+        /*sound = findViewById(R.id.soundBtn);
+
+        sound.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                textToSpeech.speak(oral_tv.getText().toString(), TextToSpeech.QUEUE_FLUSH, null);
+            }
+        });
+*/
         oral_tv.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -154,7 +186,7 @@ public class ColourActivity extends AppCompatActivity {
         oral_tv2.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                toSpeechBangla.speak(oral_tv2.getText().toString(), TextToSpeech.QUEUE_FLUSH, null);
+                textToSpeech1.speak(oral_tv2.getText().toString(), TextToSpeech.QUEUE_FLUSH, null);
             }
         });
 
@@ -182,61 +214,54 @@ public class ColourActivity extends AppCompatActivity {
 
         switch (idx) {
             case 1:
-                img.setImageResource(R.drawable.red);
-                oral_tv.setText("RED");
-                oral_tv2.setText("চোখ");
-                textToSpeech.speak("RED", TextToSpeech.QUEUE_FLUSH, null);
-                toSpeechBangla.speak("চোখ", TextToSpeech.QUEUE_FLUSH, null);
+                img.setImageResource(R.drawable.man1);
+                oral_tv.setText("Hello");
+                oral_tv2.setText("Say Hello to Everyone");
+                textToSpeech.speak("Hello", TextToSpeech.QUEUE_FLUSH, null);
+                textToSpeech1.speak("Say Hello to Everyone", TextToSpeech.QUEUE_FLUSH, null);
                 //oral_tv.setEnabled(false);
                 break;
             case 2:
-                img.setImageResource(R.drawable.blue);
-                oral_tv.setText("BLUE");
-                oral_tv2.setText("নাক");
-                textToSpeech.speak("BLUE", TextToSpeech.QUEUE_FLUSH, null);
+                img.setImageResource(R.drawable.man2);
+                oral_tv.setText("Assalamualaikum");
+                oral_tv2.setText(" Greet everyone with Salam");
+                textToSpeech.speak("Assalam mualaikum", TextToSpeech.QUEUE_FLUSH, null);
+                textToSpeech1.speak("Greet everyone with Salam", TextToSpeech.QUEUE_FLUSH, null);
                 break;
             case 3:
-                img.setImageResource(R.drawable.green);
-                oral_tv.setText("GREEN");
-                oral_tv2.setText("গলা");
-                textToSpeech.speak("GREEN", TextToSpeech.QUEUE_FLUSH, null);
+                img.setImageResource(R.drawable.man3);
+                oral_tv.setText("Washing is important");
+                oral_tv2.setText("Wash your hands before every meal");
+                textToSpeech.speak("Wash your hands", TextToSpeech.QUEUE_FLUSH, null);
+                textToSpeech1.speak("Wash your hands before every meal", TextToSpeech.QUEUE_FLUSH, null);
                 break;
             case 4:
-                img.setImageResource(R.drawable.orange);
-                oral_tv2.setText("চুল");
-                oral_tv.setText("ORANGE");
-                textToSpeech.speak("ORANGE", TextToSpeech.QUEUE_FLUSH, null);
+                img.setImageResource(R.drawable.man4);
+                oral_tv2.setText("Talk politely");
+                oral_tv.setText("Donot make loud noise");
+                textToSpeech.speak("Donot make loud noise", TextToSpeech.QUEUE_FLUSH, null);
+                textToSpeech1.speak("Talk politely", TextToSpeech.QUEUE_FLUSH, null);
                 break;
             case 5:
-                img.setImageResource(R.drawable.yellow);
-                oral_tv.setText("YELLOW");
-                oral_tv2.setText("কান");
-                textToSpeech.speak("YELLOW", TextToSpeech.QUEUE_FLUSH, null);
+                img.setImageResource(R.drawable.man5);
+                oral_tv.setText("Helping others");
+                oral_tv2.setText("Always Help others");
+                textToSpeech.speak("Helping others", TextToSpeech.QUEUE_FLUSH, null);
+                textToSpeech1.speak("Always Help others", TextToSpeech.QUEUE_FLUSH, null);
                 break;
             case 6:
-                img.setImageResource(R.drawable.pink);
-                oral_tv.setText("PINK");
-                oral_tv2.setText("ঠোঁট");
-                textToSpeech.speak("PINK", TextToSpeech.QUEUE_FLUSH, null);
+                img.setImageResource(R.drawable.man6);
+                oral_tv.setText("Thanking others");
+                oral_tv2.setText("Say thank you to the one who helped you");
+                textToSpeech.speak("Thanking others", TextToSpeech.QUEUE_FLUSH, null);
+                textToSpeech1.speak("Say thank you to the one who helped you", TextToSpeech.QUEUE_FLUSH, null);
                 break;
-
             case 7:
-                img.setImageResource(R.drawable.black);
-                oral_tv.setText("BLACK");
-                oral_tv2.setText("ঠোঁট");
-                textToSpeech.speak("BLACK", TextToSpeech.QUEUE_FLUSH, null);
-                break;
-            case 8:
-                img.setImageResource(R.drawable.white);
-                oral_tv.setText("WHITE");
-                oral_tv2.setText("ঠোঁট");
-                textToSpeech.speak("WHITE", TextToSpeech.QUEUE_FLUSH, null);
-                break;
-            case 9:
-                img.setImageResource(R.drawable.purple);
-                oral_tv.setText("PURPLE");
-                oral_tv2.setText("ঠোঁট");
-                textToSpeech.speak("PURPLE", TextToSpeech.QUEUE_FLUSH, null);
+                img.setImageResource(R.drawable.man7);
+                oral_tv.setText("Be Sorry");
+                oral_tv2.setText("Say sorry to the one you had hurt");
+                textToSpeech.speak("Be Sorry", TextToSpeech.QUEUE_FLUSH, null);
+                textToSpeech1.speak("Say sorry to the one you had hurt", TextToSpeech.QUEUE_FLUSH, null);
                 break;
         }
     }
@@ -251,9 +276,3 @@ public class ColourActivity extends AppCompatActivity {
         super.onDestroy();
     }
 }
-
-
-
-
-
-
