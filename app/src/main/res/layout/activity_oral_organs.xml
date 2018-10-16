@@ -6,6 +6,14 @@
     android:layout_height="match_parent"
     tools:context="com.example.muhamin.speechbee.OralActivity">
 
+    <ImageButton
+        android:id="@+id/soundBtn"
+        android:layout_marginTop="20dp"
+        android:layout_marginRight="20dp"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:background="@drawable/sound"
+        android:layout_alignParentRight="true"/>
 
     <ImageView
         android:layout_height="300dp"
@@ -13,7 +21,7 @@
         android:id="@+id/imageView_oral"
         android:layout_centerHorizontal="true"
         android:layout_centerInParent="true"
-        android:src="@drawable/red" />
+        android:src="@drawable/body_1" />
 
     <ImageButton
         android:id="@+id/go_back"
@@ -40,7 +48,7 @@
         android:layout_below="@id/imageView_oral"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="10dp"
-        android:text="R E D"
+        android:text="EYES"
         android:textColor="@color/black"
         android:textSize="35sp" />
 
@@ -55,6 +63,5 @@
         android:text="চোখ"
         android:textColor="@color/black"
         android:textSize="35sp" />
-
 
 </RelativeLayout>

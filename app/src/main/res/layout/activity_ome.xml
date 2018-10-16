@@ -28,7 +28,7 @@
             android:layout_alignParentTop="true"
             android:layout_marginTop="170dp"
             android:background="@drawable/button_text"
-            android:text="Body Parts Recognition" />
+            android:text="Blowing Exercises" />
 
         <Button
             android:id="@+id/btn2"
@@ -39,7 +39,7 @@
             android:layout_below="@+id/btn1"
             android:layout_marginTop="23dp"
             android:background="@drawable/button_text"
-            android:text="Color Lesson" />
+            android:text="Oral Organs" />
 
     </RelativeLayout>
 

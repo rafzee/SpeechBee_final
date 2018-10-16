@@ -21,13 +21,13 @@ public class OmeActivity extends AppCompatActivity {
         b1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                startActivity(new Intent(OmeActivity.this, OralActivity.class));
+                startActivity(new Intent(OmeActivity.this, OmeActivity.class));
             }
         });
         b2.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                startActivity(new Intent(OmeActivity.this, ColourActivity.class));
+                startActivity(new Intent(OmeActivity.this, OmeActivity.class));
             }
         });
     }
