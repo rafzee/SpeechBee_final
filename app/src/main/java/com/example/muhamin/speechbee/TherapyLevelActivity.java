@@ -31,7 +31,7 @@ public class TherapyLevelActivity extends AppCompatActivity {
         b1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent(TherapyLevelActivity.this, OralActivity.class);
+                Intent intent = new Intent(TherapyLevelActivity.this, OmeActivity.class);
                 startActivity(intent);
             }
         });
