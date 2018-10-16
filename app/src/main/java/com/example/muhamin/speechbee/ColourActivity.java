@@ -157,12 +157,7 @@ public class ColourActivity extends AppCompatActivity {
                 toSpeechBangla.speak(oral_tv2.getText().toString(), TextToSpeech.QUEUE_FLUSH, null);
             }
         });
-        oral_tv3.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                textToSpeech1.speak(oral_tv3.getText().toString(), TextToSpeech.QUEUE_FLUSH, null);
-            }
-        });
+
 
     }
 

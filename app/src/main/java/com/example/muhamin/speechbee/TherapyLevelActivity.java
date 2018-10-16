@@ -6,27 +6,31 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 
+import com.google.firebase.auth.FirebaseAuth;
+
 public class TherapyLevelActivity extends AppCompatActivity {
- Button b3, b1,b2,b4,b5,b6;
+    Button b3, b1, b2, b4, b5, b6,b7;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_therapy_level);
 
 
-
         b1 = findViewById(R.id.btn1);
-        b3=findViewById(R.id.btn3);
-        b2=findViewById(R.id.btn2);
-        b4=findViewById(R.id.btn4);
-        b5=findViewById(R.id.btn5);
-        b6=findViewById(R.id.btn6);
+        b3 = findViewById(R.id.btn3);
+        b2 = findViewById(R.id.btn2);
+        b4 = findViewById(R.id.btn4);
+        b5 = findViewById(R.id.btn5);
+        b6 = findViewById(R.id.btn6);
+        b7 = findViewById(R.id.logout);
+
         b3.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 Intent intent = new Intent(TherapyLevelActivity.this, ReceptiveLevelsActivity.class);
                 startActivity(intent);
-                }
+            }
         });
         b1.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -64,8 +68,14 @@ public class TherapyLevelActivity extends AppCompatActivity {
                 startActivity(intent);
             }
         });
-
-
+        b7.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                FirebaseAuth.getInstance().signOut();
+                startActivity(new Intent(getApplicationContext(), LoginActivity.class));
+                finish();
+              }
+        });
 
 
     }

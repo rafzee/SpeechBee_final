@@ -171,7 +171,7 @@ public class MatchingActivity extends AppCompatActivity implements View.OnClickL
                 tv1.setText("");
                 while (true) {
                     if (!tts.isSpeaking()) {
-                        tts.speak("Yayyyy Congratulations", TextToSpeech.QUEUE_FLUSH, null);
+                        tts.speak("Yay Congratulations", TextToSpeech.QUEUE_FLUSH, null);
                         break;
                     }
                 }

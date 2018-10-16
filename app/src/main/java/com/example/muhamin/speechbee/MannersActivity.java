@@ -10,7 +10,7 @@ import android.widget.TextView;
 
 import java.util.Locale;
 
-public class ExpressiveActivity extends AppCompatActivity {
+public class MannersActivity extends AppCompatActivity {
 
     private ImageView img;
     private ImageButton im1, im2;
@@ -113,7 +113,7 @@ public class ExpressiveActivity extends AppCompatActivity {
 
 
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_expressive);
+        setContentView(R.layout.activity_manners);
         img = findViewById(R.id.imageView_oral);
         oral_tv = findViewById(R.id.english_name);
         im1 = findViewById(R.id.go_next);
@@ -152,7 +152,7 @@ public class ExpressiveActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 cnt++;
-                if (cnt == 4) cnt = 1;
+                if (cnt == 8) cnt = 1;
                 setImage(cnt);
             }
         });
@@ -186,7 +186,7 @@ public class ExpressiveActivity extends AppCompatActivity {
         oral_tv2.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                toSpeechBangla.speak(oral_tv2.getText().toString(), TextToSpeech.QUEUE_FLUSH, null);
+                textToSpeech1.speak(oral_tv2.getText().toString(), TextToSpeech.QUEUE_FLUSH, null);
             }
         });
 
@@ -214,28 +214,55 @@ public class ExpressiveActivity extends AppCompatActivity {
 
         switch (idx) {
             case 1:
-                img.setImageResource(R.drawable.exp1);
-                oral_tv.setText("Now how many fingers do u see?");
-                oral_tv2.setText("bangla");
-                textToSpeech.speak("Now how many fingers do u see?", TextToSpeech.QUEUE_FLUSH, null);
-                toSpeechBangla.speak(" ", TextToSpeech.QUEUE_FLUSH, null);
+                img.setImageResource(R.drawable.man1);
+                oral_tv.setText("Hello");
+                oral_tv2.setText("Say Hello to Everyone");
+                textToSpeech.speak("Hello", TextToSpeech.QUEUE_FLUSH, null);
+                textToSpeech1.speak("Say Hello to Everyone", TextToSpeech.QUEUE_FLUSH, null);
                 //oral_tv.setEnabled(false);
                 break;
             case 2:
-                img.setImageResource(R.drawable.exp2);
-                oral_tv.setText("How many fingers do u see?");
-                oral_tv2.setText("  ");
-                textToSpeech.speak("How many fingers do u see?", TextToSpeech.QUEUE_FLUSH, null);
-                toSpeechBangla.speak(" ", TextToSpeech.QUEUE_FLUSH, null);
+                img.setImageResource(R.drawable.man2);
+                oral_tv.setText("Assalamualaikum");
+                oral_tv2.setText(" Greet everyone with Salam");
+                textToSpeech.speak("Assalam mualaikum", TextToSpeech.QUEUE_FLUSH, null);
+                textToSpeech1.speak("Greet everyone with Salam", TextToSpeech.QUEUE_FLUSH, null);
                 break;
             case 3:
-                img.setImageResource(R.drawable.exp3);
-                oral_tv.setText("How many apples are there?");
-                oral_tv2.setText(" ");
-                textToSpeech.speak("How many apples are there?", TextToSpeech.QUEUE_FLUSH, null);
-                toSpeechBangla.speak(" ", TextToSpeech.QUEUE_FLUSH, null);
+                img.setImageResource(R.drawable.man3);
+                oral_tv.setText("Washing is important");
+                oral_tv2.setText("Wash your hands before every meal");
+                textToSpeech.speak("Wash your hands", TextToSpeech.QUEUE_FLUSH, null);
+                textToSpeech1.speak("Wash your hands before every meal", TextToSpeech.QUEUE_FLUSH, null);
                 break;
-
+            case 4:
+                img.setImageResource(R.drawable.man4);
+                oral_tv2.setText("Talk politely");
+                oral_tv.setText("Donot make loud noise");
+                textToSpeech.speak("Donot make loud noise", TextToSpeech.QUEUE_FLUSH, null);
+                textToSpeech1.speak("Talk politely", TextToSpeech.QUEUE_FLUSH, null);
+                break;
+            case 5:
+                img.setImageResource(R.drawable.man5);
+                oral_tv.setText("Helping others");
+                oral_tv2.setText("Always Help others");
+                textToSpeech.speak("Helping others", TextToSpeech.QUEUE_FLUSH, null);
+                textToSpeech1.speak("Always Help others", TextToSpeech.QUEUE_FLUSH, null);
+                break;
+            case 6:
+                img.setImageResource(R.drawable.man6);
+                oral_tv.setText("Thanking others");
+                oral_tv2.setText("Say thank you to the one who helped you");
+                textToSpeech.speak("Thanking others", TextToSpeech.QUEUE_FLUSH, null);
+                textToSpeech1.speak("Say thank you to the one who helped you", TextToSpeech.QUEUE_FLUSH, null);
+                break;
+            case 7:
+                img.setImageResource(R.drawable.man7);
+                oral_tv.setText("Be Sorry");
+                oral_tv2.setText("Say sorry to the one you had hurt");
+                textToSpeech.speak("Be Sorry", TextToSpeech.QUEUE_FLUSH, null);
+                textToSpeech1.speak("Say sorry to the one you had hurt", TextToSpeech.QUEUE_FLUSH, null);
+                break;
         }
     }
 

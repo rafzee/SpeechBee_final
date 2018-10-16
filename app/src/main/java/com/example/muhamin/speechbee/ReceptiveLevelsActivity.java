@@ -7,14 +7,15 @@ import android.view.View;
 import android.widget.Button;
 
 public class ReceptiveLevelsActivity extends AppCompatActivity {
-    Button b3, b1,b2,b4,b5,b6;
+    Button b3, b1, b2;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_receptive_levels);
         b1 = findViewById(R.id.btn1);
         b2 = findViewById(R.id.btn2);
-        b3= findViewById(R.id.btn3);
+        b3 = findViewById(R.id.btn3);
         b1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {

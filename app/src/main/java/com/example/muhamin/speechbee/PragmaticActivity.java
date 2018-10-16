@@ -19,7 +19,7 @@ public class PragmaticActivity extends AppCompatActivity {
         b1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                startActivity(new Intent(PragmaticActivity.this, OmeActivity.class));
+                startActivity(new Intent(PragmaticActivity.this, MannersActivity.class));
             }
         });
         b2.setOnClickListener(new View.OnClickListener() {
