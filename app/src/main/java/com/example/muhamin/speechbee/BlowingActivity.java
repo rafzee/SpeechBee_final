@@ -2,6 +2,8 @@ package com.example.muhamin.speechbee;
 
 import android.media.MediaPlayer;
 import android.net.Uri;
+import android.os.Build;
+import android.support.annotation.RequiresApi;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
@@ -37,6 +39,7 @@ public class BlowingActivity extends AppCompatActivity {
 
         v.requestFocus();
         v.setOnPreparedListener(new MediaPlayer.OnPreparedListener() {
+            @RequiresApi(api = Build.VERSION_CODES.CUPCAKE)
             @Override
             public void onPrepared(MediaPlayer mediaPlayer) {
                 v.seekTo(position);
@@ -53,17 +56,16 @@ public class BlowingActivity extends AppCompatActivity {
             }
         });
 
+        v.requestFocus();
    }
 
 
-/*
     public int getRawResIdByName(String resName) {
         String pkgName = this.getPackageName();
         int resID = this.getResources().getIdentifier(resName, "video", pkgName);
         //Log.i("AndroidVideoView", "Res Name: " + resName + "==> Res ID = " + resID);
         return resID;
     }
-*/
 
 
     @Override
