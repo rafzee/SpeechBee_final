@@ -152,7 +152,7 @@ public class ExpressiveActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 cnt++;
-                if (cnt == 4) cnt = 1;
+                if (cnt == 5) cnt = 1;
                 setImage(cnt);
             }
         });
@@ -216,24 +216,31 @@ public class ExpressiveActivity extends AppCompatActivity {
             case 1:
                 img.setImageResource(R.drawable.exp1);
                 oral_tv.setText("Now how many fingers do u see?");
-                oral_tv2.setText("bangla");
+                oral_tv2.setText("এখন বলোত এখানে কয়টা আঙ্গুল?");
                 textToSpeech.speak("Now how many fingers do u see?", TextToSpeech.QUEUE_FLUSH, null);
-                toSpeechBangla.speak(" ", TextToSpeech.QUEUE_FLUSH, null);
+                toSpeechBangla.speak("এখন বলোত এখানে কয়টা আঙ্গুল?", TextToSpeech.QUEUE_FLUSH, null);
                 //oral_tv.setEnabled(false);
                 break;
             case 2:
                 img.setImageResource(R.drawable.exp2);
                 oral_tv.setText("How many fingers do u see?");
-                oral_tv2.setText("  ");
+                oral_tv2.setText("এখানে কয়তা আঙ্গুল?");
                 textToSpeech.speak("How many fingers do u see?", TextToSpeech.QUEUE_FLUSH, null);
-                toSpeechBangla.speak(" ", TextToSpeech.QUEUE_FLUSH, null);
+                toSpeechBangla.speak("এখানে কয়তা আঙ্গুল?", TextToSpeech.QUEUE_FLUSH, null);
                 break;
             case 3:
                 img.setImageResource(R.drawable.exp3);
                 oral_tv.setText("How many apples are there?");
-                oral_tv2.setText(" ");
+                oral_tv2.setText("এখানে কয়টা আপেল আছে?");
                 textToSpeech.speak("How many apples are there?", TextToSpeech.QUEUE_FLUSH, null);
-                toSpeechBangla.speak(" ", TextToSpeech.QUEUE_FLUSH, null);
+                toSpeechBangla.speak("এখানে কয়টা আপেল আছে?", TextToSpeech.QUEUE_FLUSH, null);
+                break;
+            case 4:
+                img.setImageResource(R.drawable.food);
+                oral_tv.setText("How many food items are there?");
+                oral_tv2.setText("এখানে কয়টা খাবার আছে?");
+                textToSpeech.speak("How many food items are there?", TextToSpeech.QUEUE_FLUSH, null);
+                toSpeechBangla.speak("এখানে কয়টা খাবার আছে?", TextToSpeech.QUEUE_FLUSH, null);
                 break;
 
         }
